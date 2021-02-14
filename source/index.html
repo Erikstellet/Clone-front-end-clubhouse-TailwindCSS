@@ -6,14 +6,45 @@
         <title>Clone Club House</title>
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+        
+        <style>
+            *, :root, button
+            {
+                font-family: 'Poppins';
+                letter-spacing: 1px;
+            }
+
+            main
+            {
+                border-top-left-radius: 2.3rem;
+                border-top-right-radius: 2.3rem;
+            }
+          
+            main > div p
+            {
+                background-color: #ddd;
+                border-radius: 45%;
+                width: 85px;
+                height: 85px;
+
+                text-indent: -9999px;
+                display: block;
+                overflow: hidden;
+            }
+
+            main > div 
+            {
+                align-items: center;
+                justify-items: center;
+            }
+        </style>
     </head>
 
-    <body>
-        
-        <div class="w-screen h-screen bg-yellow-50 p-4">
-
+    <body class="m-auto h-screen flex flex-col bg-yellow-50 max-w-screen sm:max-w-md">
+        <div class="w-full h-18 bg-yellow-50 p-4">
             <header class="w-full flex justify-between">
+
                 <div class="flex items-center">
                     <span class="w-8 h-8 mr-2"> 
                         <img  src="assets/arrow-down.png">
@@ -21,24 +52,46 @@
                 </div>
 
                 <div class="flex items-center">
-                    <div class="w-10 h-10 mr-2 mt-4">
-                        <img class="w-6 h-6 ml-2" 
-                             src="assets/file.png">
-                    </div>
-                    <img class="w-8 h-8 ml-2 rounded-full" 
+                    <img class="w-6 h-6 ml-2" src="assets/file.png">
+                    
+                    <img class="w-8 h-8 ml-6 rounded-full" 
                          src="https://i.imgur.com/kJCWUAo.jpg">
                 </div>
+                
             </header>
-
-            <main></main>
-
-            <footer>
-                <button class="rounded-full bg-gray-200 py-1 px-4">
-                    <span>✋🏻</span>
-                    <span class="text-red-500 ml-2">Leave quietly</span>
-                </button>
-            </footer>
-
         </div>
+
+        <main class="bg-white h-screen w-full rounded-t-3xl shadow px-6 py-4">
+            <h1 class="mb-4">🔴 &nbsp; Como crescer no instagram</h1>
+
+            <div class="grid gap-4 grid-cols-3 px-4">
+                <p>aaaaa</p><p>aaaaa</p><p>aaaaa</p>
+                <p>aaaaa</p><p>aaaaa</p><p>aaaaa</p>
+                <p>aaaaa</p><p>aaaaa</p><p>aaaaa</p>
+                <p>aaaaa</p><p>aaaaa</p><p>aaaaa</p>
+                <p>aaaaa</p><p>aaaaa</p><p>aaaaa</p>
+                <p>aaaaa</p><p>aaaaa</p><p>aaaaa</p>
+            </div>
+        </main>
+
+        <footer class="bg-white fixed bottom-0 m-auto p-3 flex items-center justify-between sm:max-w-md w-full">
+            <button class="rounded-full bg-gray-200 py-1.5 px-4">
+                <span class="mt-0.5">✋🏻</span>
+                <span class="text-red-400 ml-2 text-xs">Leave quietly</span>
+            </button>
+
+            <div class="flex items-center">
+                <button>
+                    <img class="w-10 h-10 ml-2 p-2 rounded-full bg-gray-200" 
+                         src="assets/plus.png">
+                </button>
+                <button> 
+                    <img class="mr-2 w-10 h-10 ml-2 p-2 rounded-full bg-gray-200" 
+                         src="assets/privacy.png">
+                </button>
+            </div>
+        </footer>
+
+       
     </body>
 </html>

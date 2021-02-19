@@ -3,51 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
         <title>Clone Club House</title>
+
+        <link rel="stylesheet" href="main.css"> 
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
-        
-        <style>
-            *, :root, button
-            {
-                padding: 0;
-                margin: 0;
-                font-family: 'Poppins';
-                letter-spacing: 1px;
-            }
-
-            main
-            {
-                border-top-left-radius: 2.3rem;
-                border-top-right-radius: 2.3rem;
-            }
-          
-            main > div p
-            {
-                background-color: #ddd;
-                border-radius: 45%;
-                width: 85px;
-                height: 85px;
-
-                text-indent: -9999px;
-                display: block;
-                overflow: hidden;
-            }
-
-            main > div 
-            {
-                align-items: center;
-                justify-items: center;
-            }
-        </style>
     </head>
     
     <body class="m-auto h-screen flex flex-col bg-gray-200 sm:max-w-md">
-
-        <div class="bg-yellow-50">
+ 
+        <div class="primeiradiv">
             
-            <div class="w-full  bg-yellow-50 p-4">
+            <div class="w-full bg-yellow-50 p-4">
                 <header class="w-full flex justify-between ">
 
                     <div class="flex items-center">
@@ -82,7 +51,7 @@
             </div>
         </main>
 
-        <footer class="bg-white fixed bottom-0 m-auto p-3 flex items-center 
+        <footer class="bg-white bottom-0 m-auto p-3 flex items-center 
                        justify-between sm:max-w-md w-full">
 
             <button class="rounded-full bg-gray-200 py-1.5 px-4
@@ -92,26 +61,25 @@
             </button>
 
             <div class="flex items-center">
-                <button class="bg-gray-200 w-10 h-10 ml-2 p-2 rounded-full
-                               hover:bg-gray-300 focus:outline-none">
+                <button class="btn-plus bg-gray-200 w-10 h-10 ml-2 p-2 rounded-full
+                               hover:bg-gray-300 focus:outline-none"
+                               onclick="modal.openPlus()">
                     <img src="assets/plus.png">
                 </button>
 
-                <button class="mr-2 w-10 h-10 ml-2 p-2 rounded-full bg-gray-200 
-                               hover:bg-gray-300 focus:outline-none"> 
-                        <a href="#" onclick="Modal.open()">
-                            <img src="assets/privacy.png">
-                        </a>
+                <button class="btn-hand mr-2 w-10 h-10 ml-2 p-2 rounded-full bg-gray-200 
+                               hover:bg-gray-300 focus:outline-none"
+                               onclick="modal.openHand()"> 
+                        <img src="assets/hand.png">  
                 </button>
             </div>
         </footer>
 
-        <!--active:-->
-        <!------------------------------------  Modal  ---------------------------------->
+        <!------------------------------------  Modal Plus ---------------------------------->
         <div class="modal-overlay invisible h-screen w-screen fixed flex items-center justify-center
                     bg-gray-400 bg-opacity-70 sm:max-w-md">
 
-            <div class=".modal items-center justify-center bg-white
+            <div class="modal items-center justify-center bg-white
                         w-11/12 h-80 mt-52 rounded-2xl sm:max-w-md">
                 
                     <div class="pt-2 px-4 mb-8">
@@ -136,9 +104,37 @@
             </div>
         </div>
 
-        <!---->
-        <!------------------------------------ Script  ---------------------------------->
-        <script src="./scrips"></script>
+        <!------------------------------------  Modal Hand ---------------------------------->
+        <div class="modal-overlay invisible h-screen w-full fixed flex items-end justify-center
+                    bg-gray-400 bg-opacity-70 sm:max-w-md">
+
+            <div class="modal bg-white items-center justify-center w-full h-3/6 sm:max-w-md">
+                   
+                <div class="p-10 items-center justify-center px-4">
+
+                    <img class="self-center mx-32 my-4 h-20 " src="assets/hand_2.png">
+
+                    <h2 class="text-black mx-16 mb-6 text-2xl">Raise your hand?</h2>
+
+                    <p class="text-gray-400 mx-2 text-ls">This will let the speakers know you have</p>
+                    <p class="text-gray-400 mx-16 mb-6 text-ls">something you`d like to say</p>
+
+                    <div class="flex">
+                        <button class="flex rounded-full bg-blue-500 px-8 py-4 mr-6
+                                       hover:bg-blue-600 focus:outline-none text-white">
+                                       Never mind
+                        </button>
+                        <button class="flex rounded-full bg-blue-500 px-4 py-4 pr-2
+                                       hover:bg-blue-600 focus:outline-none text-white">
+                                       Raise Hand
+                                <img class="h-6 px-2" src="assets/hand_2.png">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!------------------------------------ Script  ---------------------------------->
+        <script src="scripts.js"></script>
     </body>
 </html>
 

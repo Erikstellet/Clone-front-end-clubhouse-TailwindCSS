@@ -2,4 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+*, :root, button {
+    font-family: 'Poppins';
+    letter-spacing: -0.2px;
 
+}
+
+main {
+    border-top-left-radius: 2.3rem;
+    border-top-right-radius: 2.3rem;
+}
+
+
+main > div p {
+    background-color: #ddd;
+    border-radius: 42%;
+    width:85px;
+    height: 85px;
+    text-indent: -9999px;
+    display: block;
+    overflow: hidden;
+}
+
+main > div {
+    align-items: center;
+    justify-items: center;
+}

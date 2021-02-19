@@ -1,15 +1,19 @@
-var modal = document.querySelector('#modal');
-
-var conta = document.querySelector('.conta')
-
-modal.addEventListener('click', function ()
+let modal = 
 {
-    if(conta.style.display === 'block')
+    openPlus()
     {
-        conta.style.display = 'none'
-    }
-    else
+        document.querySelector('.modal-overlay').classList.toggle('invisible')
+        document.querySelector('.btn-plus').classList.add('z-50')
+    },
+    /*
+    openHand()
     {
-        conta.style.display = 'block'
-    }
-})
+        document.querySelector('.modal-overlay').classList.toggle('invisible')
+        document.querySelector('.btn-plus').classList.add('z-50')
+    },
+    open()
+    {
+        document.querySelector('.modal-overlay').classList.toggle('invisible')
+        document.querySelector('.btn-plus').classList.add('z-50')
+    },*/
+}

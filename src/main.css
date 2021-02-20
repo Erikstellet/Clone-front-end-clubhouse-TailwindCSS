@@ -28,3 +28,7 @@ main > div {
     align-items: center;
     justify-items: center;
 }
+
+::-webkit-scrollbar {
+    width: 0px;
+}

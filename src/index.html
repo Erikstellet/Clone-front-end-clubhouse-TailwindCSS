@@ -12,12 +12,12 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
     </head>
     
-    <body class="m-auto h-screen flex flex-col bg-gray-200 sm:max-w-md">
+    <body class="flex flex-col h-screen m-auto bg-gray-200 sm:max-w-md">
  
         <div class="primeiradiv">
             
-            <div class="w-full bg-yellow-50 p-4">
-                <header class="w-full flex justify-between ">
+            <div class="w-full p-4 bg-yellow-50">
+                <header class="flex justify-between w-full ">
 
                     <div class="flex items-center">
                         <span class="w-8 h-8 mr-2"> 
@@ -37,52 +37,54 @@
         
         </div>
     
-            <main class="bg-white rounded-t-3xl w-full shadow px-6 py-4">
-                <h1 class="mb-4">🔴&nbsp;Como crescer no instagram</h1>
+        <!-------------------------------------------------------------  CONTENT ----------------------------------------------------------->
+        <main class="overflow-y-scroll h-5/6 w-full px-1 py-2 bg-white shadow rounded-t-3xl">
 
-                <div class="grid gap-4 grid-cols-3 px-4">
-                    <p>AAA</p><p>AAA</p><p>AAA</p>
-                    <p>AAA</p><p>AAA</p><p>AAA</p>
-                    <p>AAA</p><p>AAA</p><p>AAA</p>
-                    <p>AAA</p><p>AAA</p><p>AAA</p>
-                    <p>AAA</p><p>AAA</p><p>AAA</p>
-                    <p>AAA</p><p>AAA</p><p>AAA</p>
+            <h1 class="m-4">🔴&nbsp;Como crescer no instagram</h1>
+
+                <div class="grid grid-cols-4 gap-2 p-4">
+                        <p>A</p><p>A</p><p>A</p><p>A</p>
+                        <p>A</p><p>A</p><p>A</p><p>A</p>
                 </div>
+
+            <div class="grid grid-cols-4 gap-2 px-4">
+                <p>A</p><p>A</p><p>A</p><p>A</p>
+                <p>A</p><p>A</p><p>A</p><p>A</p>
+                <p>A</p><p>A</p><p>A</p><p>A</p>
+                <p>A</p><p>A</p><p>A</p><p>A</p>
+                <p>A</p><p>A</p><p>A</p><p>A</p>
             </div>
         </main>
 
-        <footer class="bg-white bottom-0 m-auto p-3 flex items-center 
-                       justify-between sm:max-w-md w-full">
+        <footer class="bottom-0 flex items-center justify-between w-full p-3 m-auto bg-white sm:max-w-md">
 
             <button class="rounded-full bg-gray-200 py-1.5 px-4
                            hover:bg-gray-300 focus:outline-none">
                 <span class="mt-0.5">✋🏻</span>
-                <span class="text-red-400 ml-2 text-xs">Leave quietly</span>
+                <span class="ml-2 text-xs text-red-400">Leave quietly</span>
             </button>
 
             <div class="flex items-center">
-                <button class="btn-plus bg-gray-200 w-10 h-10 ml-2 p-2 rounded-full
-                               hover:bg-gray-300 focus:outline-none"
+                <button class="w-10 h-10 p-2 ml-2 bg-gray-200 rounded-full btn-plus hover:bg-gray-300 focus:outline-none"
                                onclick="modal.openPlus()">
                     <img src="assets/plus.png">
                 </button>
 
-                <button class="btn-hand mr-2 w-10 h-10 ml-2 p-2 rounded-full bg-gray-200 
-                               hover:bg-gray-300 focus:outline-none"
+                <button class="w-10 h-10 p-2 ml-2 mr-2 bg-gray-200 rounded-full btn-hand hover:bg-gray-300 focus:outline-none"
                                onclick="modal.openHand()"> 
                         <img src="assets/hand.png">  
                 </button>
             </div>
         </footer>
 
-        <!------------------------------------  Modal Plus ---------------------------------->
-        <div class="modal-overlay invisible h-screen w-screen fixed flex items-center justify-center
-                    bg-gray-400 bg-opacity-70 sm:max-w-md">
+        <!------------------------------------------------------------  MODAL PLUS --------------------------------------------------------------->
+        <div class="fixed flex items-center justify-center invisible w-screen h-screen bg-gray-400 
+                    modal-overlay bg-opacity-70 sm:max-w-md">
 
-            <div class="modal items-center justify-center bg-white
-                        w-11/12 h-80 mt-52 rounded-2xl sm:max-w-md">
+            <div class="items-center justify-center w-11/12 bg-white modal h-80 mt-52 
+                        rounded-2xl sm:max-w-md">
                 
-                    <div class="pt-2 px-4 mb-8">
+                    <div class="px-4 pt-2 mb-8">
                         <form>
 
                             <label class="px-2 text-sm" for="ping">
@@ -96,7 +98,7 @@
                     </div>  
 
                     <div class="flex items-center justify-center">
-                        <div class="grid gap-20 grid-cols-3 px-4 pb-8">
+                        <div class="grid grid-cols-3 gap-20 px-4 pb-8">
                             <p>AAA</p><p>AAA</p><p>AAA</p>
                             <p>AAA</p><p>AAA</p><p>AAA</p>
                         </div>
@@ -104,36 +106,53 @@
             </div>
         </div>
 
-        <!------------------------------------  Modal Hand ---------------------------------->
-        <div class="modal-overlay invisible h-screen w-full fixed flex items-end justify-center
-                    bg-gray-400 bg-opacity-70 sm:max-w-md">
-
-            <div class="modal bg-white items-center justify-center w-full h-3/6 sm:max-w-md">
+        <!-------------------------------------------------------------  MODAL Hand ----------------------------------------------------------->
+        <div class="fixed flex items-end justify-center invisible w-full h-screen bg-gray-400 
+                    modal-overlay bg-opacity-70 sm:max-w-md">
+            <div class="flex items-center justify-center w-full bg-white modal h-3/6">
                    
-                <div class="p-10 items-center justify-center px-4">
+                <div class="items-center justify-center">
 
-                    <img class="self-center mx-32 my-4 h-20 " src="assets/hand_2.png">
+                    <p class="flex justify-center">
+                        <img class="h-14 my-4" src="assets/hand_2.png">
+                    </p>
+                    
+                    <h2 class="flex justify-center mb-4 text-2xl text-black">
+                        Raise your hand?
+                    </h2>
 
-                    <h2 class="text-black mx-16 mb-6 text-2xl">Raise your hand?</h2>
+                    <p class="flex justify-center text-gray-400">
+                       This will let the speakers know you have
+                    </p>
+                    <p class="flex justify-center text-gray-400">
+                       something you`d like to say
+                    </p>
 
-                    <p class="text-gray-400 mx-2 text-ls">This will let the speakers know you have</p>
-                    <p class="text-gray-400 mx-16 mb-6 text-ls">something you`d like to say</p>
-
-                    <div class="flex">
-                        <button class="flex rounded-full bg-blue-500 px-8 py-4 mr-6
-                                       hover:bg-blue-600 focus:outline-none text-white">
-                                       Never mind
-                        </button>
-                        <button class="flex rounded-full bg-blue-500 px-4 py-4 pr-2
-                                       hover:bg-blue-600 focus:outline-none text-white">
-                                       Raise Hand
+                    <div class="flex justify-center mt-4">
+                        <button class="px-8 py-4 mr-2 text-white bg-blue-500 rounded-full
+                                    hover:bg-blue-600 focus:outline-none">Never mind</button>
+                        <button class="flex px-4 pr-2 py-4 ml-2 text-white bg-blue-500 
+                                       rounded-full hover:bg-blue-600 focus:outline-none">
+                                Raise Hand
                                 <img class="h-6 px-2" src="assets/hand_2.png">
                         </button>
                     </div>
                 </div>
+
             </div>
         </div>
-         <!------------------------------------ Script  ---------------------------------->
+
+        <!-------------------------------------------------------------  BIO  ------------------------------------------------------------->
+        <div class="fixed flex items-end justify-center invisible w-full h-screen bg-gray-400 
+                    modal-overlay bg-opacity-70 sm:max-w-md">
+            <div class="border-4 border-black flex items-center justify-center w-full 
+                      bg-white modal h-3/6">
+                
+                
+
+            </div>
+        </div>
+        <!------------------------------------------------------------- Script  ----------------------------------------------------------->
         <script src="scripts.js"></script>
     </body>
 </html>

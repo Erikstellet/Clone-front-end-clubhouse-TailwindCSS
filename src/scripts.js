@@ -1,4 +1,4 @@
-// DATABASE
+//===============================  DATABASE  ===============================
 const profiles = 
 [
     { 
@@ -86,7 +86,7 @@ const profilesCall =
     },
 ]
 
-// OPEN MODAL
+//===============================  OPEN MODAL  ===============================  
 let modal = 
 {
     openModalOverlay()
@@ -111,7 +111,7 @@ let modal =
     },
 }
 
-// INNER HTML
+//===============================  INNER HTML  ===============================
 const DOM = 
 {
     profileContainer: document.querySelector(".all"),
@@ -131,7 +131,7 @@ const DOM =
                                 <div class="">
                                     <img class="avatar h-16 my-1" src="${profiles.imgUrl}">
                                 </div>
-                                <p class="my-1 flex justify-center">${profiles.name}</p>
+                                <p class="flex justify-center text-xs">${profiles.name}</p>
                             </div>`
 
        return profile             
@@ -143,7 +143,7 @@ const DOM =
                                 <button class="focus:outline-none" onclick="modal.openBio()"</button>
                                     <img class="border-4 ${profiles.border} avatar h-16 my-1" src="${profiles.imgUrl}">
                                 </div>
-                                <p class="my-1 flex justify-center">${profiles.name}</p>
+                                <p class="flex justify-center text-xs">${profiles.name}</p>
                              </div>`
 
        return profile             

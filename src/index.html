@@ -43,7 +43,6 @@
             <h1 class="m-4">🔴&nbsp;Como crescer no instagram</h1>
 
                 <div class="call bg-gray-200 grid grid-cols-4 gap-2 p-4 my-2">
-                    
                     <!--------------- PROFILES LIST --------------->
                 </div>
                 
@@ -63,19 +62,19 @@
 
             <div class="flex items-center">
                 <button class="w-10 h-10 p-2 ml-2 bg-gray-200 rounded-full btn-plus hover:bg-gray-300 focus:outline-none"
-                               onclick="modal.openPlus()">
+                               onclick="modal.openModal('modal-plus')">
                     <img src="assets/plus.png">
                 </button>
 
                 <button class="w-10 h-10 p-2 ml-2 mr-2 bg-gray-200 rounded-full btn-hand hover:bg-gray-300 focus:outline-none"
-                               onclick="modal.openHand()"> 
+                               onclick="modal.openModal('modal-hand')"> 
                         <img src="assets/hand.png">  
                 </button>
             </div>
         </footer>
 
         <!------------------------------------------------------------  OVERLAY --------------------------------------------------------------->
-        <div class="fixed flex items-center justify-center invisible w-screen h-screen bg-gray-400 
+        <div class="fixed invisible flex items-center justify-center w-screen h-screen bg-gray-400 
                         modal-overlay bg-opacity-70 sm:max-w-md">
 
         <!------------------------------------------------------------  MODAL PLUS  --------------------------------------------------------------->
@@ -137,8 +136,10 @@
             </div>
 
         <!-------------------------------------------------------------  BIO  ------------------------------------------------------------->
-            <div class="modal-bio hidden items-center justify-center w-full bg-white mt-96 h-3/6">
-                
+            <div class="modal-bio hidden items-center justify-center w-full bg-white mt-96 h-3/6 rounded-3xl">
+                <div class="bio bg-gray-200 grid grid-cols-4 gap-2 p-4 my-2">
+                    <!--------------- PROFILES LIST --------------->
+                </div>
             </div>
         </div>
         <!------------------------------------------------------------- Script  ----------------------------------------------------------->

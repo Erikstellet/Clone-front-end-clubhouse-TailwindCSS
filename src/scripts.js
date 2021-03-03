@@ -2,13 +2,15 @@
 const profiles = 
 [
     { 
+        id: '1',
         name: 'Bianca',
-        imgUrl: 'https://i.imgur.com/kJCWUAo.jpg',
+        imgUrl: 'https://images.unsplash.com/photo-1546539782-6fc531453083?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ',
         followers: 10,
         following: 50,
         description:  "ABC"
     },
     { 
+        id: '2',
         name: 'Ana',
         imgUrl: 'https://randomuser.me/api/portraits/women/17.jpg',
         followers: 10,
@@ -16,6 +18,7 @@ const profiles =
         description:  "ABC"
     },
     {
+        id: '3',
         name: 'João',
         imgUrl: 'https://images.generated.photos/z_w45-PQ28jY08f8O4BMykbnCVpwXsaoDvzoBgPYCg0/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yy/XzA4MzYxMDIuanBn.jpg',
         followers: 10,
@@ -23,6 +26,7 @@ const profiles =
         description:  "ABC"  
     },
     {
+        id: '4',
         name: 'Bruna',
         imgUrl: 'https://images.generated.photos/fTMh3vQ9TgIyQx3jrloovat8213qROuZSWz4jj1yOkg/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zLzA5/NDAzNjMuanBn.jpg',
         followers: 10,
@@ -30,13 +34,15 @@ const profiles =
         description:  "ABC"
     },
     { 
+        id: '4',
         name: 'Alana',
-        imgUrl: 'https://i.imgur.com/SSWYAW4.jpg',
+        imgUrl: 'https://randomuser.me/api/portraits/women/44.jpg',
         followers: 10,
         following: 50,
         description:  "ABC"
     },
     {
+        id: '5',
         name: 'Maria',
         imgUrl: 'https://images.generated.photos/B7CJLWXHEhr73EmhhiWyTK-WT39VwobNNqwknL-vwUg/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zLzA5/NzY1NDcuanBn.jpg',
         followers: 10,
@@ -44,20 +50,23 @@ const profiles =
         description:  "ABC"  
     },
     { 
+        id: '6',
         name: 'Lucas',
         imgUrl: 'https://uifaces.co/our-content/donated/FJkauyEa.jpg',
         followers: 10,
         following: 50,
         description:  "ABC"  
     },
-    { 
+    {
+        id: '7', 
         name: 'Julia',
         imgUrl: 'https://images.generated.photos/7s6pbOWWL7BXR5niwIILZ52rsEv5rupl5Jcq-eczjOI/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yy/XzAxODM3MzUuanBn.jpg',
         followers: 10,
         following: 50,
         description:  "ABC"  
     },
-    { 
+    {
+        id: '8', 
         name: 'Pedro',
         imgUrl: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?crop=faces&fit=crop&h=200&w=200&auto=compress&cs=tinysrgb',
         followers: 10,
@@ -68,46 +77,44 @@ const profiles =
 
 const profilesCall = 
 [
-    { 
+    {
+        id: '7', 
         name: 'Julia',
         imgUrl: 'https://images.generated.photos/7s6pbOWWL7BXR5niwIILZ52rsEv5rupl5Jcq-eczjOI/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yy/XzAxODM3MzUuanBn.jpg',
         followers: 10,
         following: 50,
         description:  "ABC",
-        border: 'border-green-400'  
+        border: 'border-green-400',  
     },
-    { 
+    {
+        id: '8', 
         name: 'Pedro',
         imgUrl: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?crop=faces&fit=crop&h=200&w=200&auto=compress&cs=tinysrgb',
         followers: 10,
         following: 50,
         description:  "ABC",
-        border: 'border-transparent'  
+        border: 'border-transparent',  
     },
 ]
 
 //===============================  OPEN MODAL  ===============================  
 let modal = 
 {
-    openModalOverlay()
+    openModal(modalPlus)
     {
         document.querySelector('.modal-overlay').classList.toggle('invisible')
+        document.querySelector(`.${modalPlus}`).classList.toggle('hidden')
+        
+        if(modalPlus == 'modal-plus')
+        {
+            document.querySelector('.btn-plus').classList.toggle('z-50')
+        }
     },
-    openPlus()
+    openBio(i)
     {
-        modal.openModalOverlay()
-        document.querySelector('.modal-plus').classList.toggle('hidden')
-        document.querySelector('.btn-plus').classList.toggle('z-50')
-    },
-    openHand()
-    {
-        modal.openModalOverlay()
-        document.querySelector('.modal-hand').classList.toggle('hidden')   
-    },
-    openBio()
-    {
-        modal.openModalOverlay()
+        document.querySelector('.modal-overlay').classList.toggle('invisible')
         document.querySelector('.modal-bio').classList.toggle('hidden')
+        DOM.createProfileBio(profiles[i])
     },
 }
 
@@ -117,6 +124,7 @@ const DOM =
     profileContainer: document.querySelector(".all"),
     profileContainerSearch: document.querySelector(".search"),
     profileContainerCall: document.querySelector(".call"),
+    profileContainerBio: document.querySelector(".bio"),
     
     createProfile(profile)
     {
@@ -140,9 +148,22 @@ const DOM =
     {
         const profile =     `<div>
                                 <div class="">
-                                <button class="focus:outline-none" onclick="modal.openBio()"</button>
+                                <button class="focus:outline-none" onclick="modal.openBio('${profiles.id}')"</button>
                                     <img class="border-4 ${profiles.border} avatar h-16 my-1" src="${profiles.imgUrl}">
                                 </div>
+                                <p class="flex justify-center text-xs">${profiles.name}</p>
+                             </div>`
+
+       return profile             
+    },
+    innerHTMLBio(profiles)
+    {
+        const profile =     `<div>
+                                <div class="">
+                                <button class="focus:outline-none" onclick=""</button>
+                                    <img class="border-4 ${profiles.border} avatar h-16 my-1" src="${profiles.imgUrl}">
+                                </div>
+                                <p>ABC</p><br>
                                 <p class="flex justify-center text-xs">${profiles.name}</p>
                              </div>`
 
@@ -162,6 +183,12 @@ const DOM =
 
         DOM.profileContainerCall.appendChild(div)
     },
+    createProfileBio(profile)
+    {
+        const div = document.createElement('div');
+        div.innerHTML = DOM.innerHTMLBio(profile)
+        DOM.profileContainerBio.appendChild(div)
+    }
 }
 
 profiles.forEach(profile => DOM.createProfile(profile))
@@ -172,4 +199,5 @@ for(let i = 0; i < 4; i++)
 }
 
 profilesCall.forEach(profile => DOM.createProfileCall(profile))
+
 

@@ -3,7 +3,7 @@ const followersB =
 [
     {
         id: '7', 
-        name: 'Julia Almeida',
+        name: 'Julia',
         imgUrl: 'https://images.generated.photos/7s6pbOWWL7BXR5niwIILZ52rsEv5rupl5Jcq-eczjOI/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yy/XzAxODM3MzUuanBn.jpg',
         followers: 10,
         following: 50,
@@ -29,7 +29,7 @@ const followingB =
 [
     {
         id: '7', 
-        name: 'Julia Almeida',
+        name: 'Julia',
         imgUrl: 'https://images.generated.photos/7s6pbOWWL7BXR5niwIILZ52rsEv5rupl5Jcq-eczjOI/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yy/XzAxODM3MzUuanBn.jpg',
         followers: 10,
         following: 50,
@@ -132,7 +132,7 @@ const profiles =
     },
     {
         id: '7', 
-        name: 'Julia Almeida',
+        name: 'Julia',
         imgUrl: 'https://images.generated.photos/7s6pbOWWL7BXR5niwIILZ52rsEv5rupl5Jcq-eczjOI/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yy/XzAxODM3MzUuanBn.jpg',
         followers: 10,
         following: 50,
@@ -172,6 +172,7 @@ let modal =
     {
         document.querySelector('.modal-overlay').classList.toggle('invisible')
         document.querySelector(`.${modals}`).classList.toggle('hidden')
+        document.querySelector(`.${modals}`).classList.toggle('.modal-bio')
         
         if(modals == 'modal-plus')
         {
@@ -198,10 +199,18 @@ let modal =
             DOM.createProfileBio(profiles[i])
         }
     },
-    modalClose()
+    modalClose(modals)
     {
-        document.querySelector('.modal-overlay').classList.toggle('invisible')
-        document.querySelector('.modal-bio').classList.toggle('hidden')    
+        if(modals == 'modal-hand')
+        {
+            document.querySelector('.modal-overlay').classList.toggle('invisible')
+            document.querySelector('.modal-hand').classList.toggle('hidden')  
+        }
+        else
+        {
+            document.querySelector('.modal-overlay').classList.toggle('invisible')
+            document.querySelector('.modal-bio').classList.toggle('hidden')  
+        }
     },
 }
 
@@ -335,13 +344,7 @@ const follows =
         {
             followersB.push(profiles[9])
         }
-
-        console.log(followersB.length)
-    },
-    followingsB()
-    {
-        
-    },
+    }
 }
 
 for(let i = 3; i < profiles.length; i++)

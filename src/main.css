@@ -30,3 +30,46 @@ main > div {
     border-radius: 46%;
     text-indent: -9999px;
 }
+
+@keyframes anime
+{
+    from
+    {
+        transform: translate3d(0, 600px, 0);
+    }
+
+    to
+    {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.modal-hand
+{
+    animation: anime .4s;
+}
+
+.modal-bio
+{
+    animation: anime .4s;
+}
+
+@keyframes plus
+{
+    from
+    {
+        opacity: 0;
+        transform: translateX(0) scale(0.9);
+    }
+    to
+    {
+        opacity: 1;
+        transform: translateX(0) scale(1.0);
+    }
+}
+
+.modal-plus
+{
+    animation: plus 0.4s;
+}
+

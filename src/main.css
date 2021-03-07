@@ -31,7 +31,7 @@ main > div {
     text-indent: -9999px;
 }
 
-@keyframes anime
+@keyframes anime-in
 {
     from
     {
@@ -44,15 +44,12 @@ main > div {
     }
 }
 
-.modal-hand
+.modal-hand,
+.modal-bio 
 {
-    animation: anime .4s;
+    animation: anime-in .4s;
 }
 
-.modal-bio
-{
-    animation: anime .4s;
-}
 
 @keyframes plus
 {
@@ -72,4 +69,3 @@ main > div {
 {
     animation: plus 0.4s;
 }
-

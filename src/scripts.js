@@ -1,64 +1,12 @@
 //===============================  DATABASE  ===============================
-const followersB = 
-[
-    {
-        id: '7', 
-        name: 'Julia',
-        imgUrl: 'https://images.generated.photos/7s6pbOWWL7BXR5niwIILZ52rsEv5rupl5Jcq-eczjOI/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yy/XzAxODM3MzUuanBn.jpg',
-        followers: 10,
-        following: 50,
-        description:  "Olá! Gosto bastante de conversar!",
-        andress: "@Julia1996",
-        status: "moderador",
-        border: 'border-green-400',
-    },
-    {
-        id: '8', 
-        name: 'Pedro',
-        imgUrl: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?crop=faces&fit=crop&h=200&w=200&auto=compress&cs=tinysrgb',
-        followers: 10,
-        following: 50,
-        description:  "ABC",
-        andress: "@PedroGM",
-        status: "moderator",
-        border: 'border-transparent',
-    },
-]
-
-const followingB = 
-[
-    {
-        id: '7', 
-        name: 'Julia',
-        imgUrl: 'https://images.generated.photos/7s6pbOWWL7BXR5niwIILZ52rsEv5rupl5Jcq-eczjOI/rs:fit:512:512/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yy/XzAxODM3MzUuanBn.jpg',
-        followers: 10,
-        following: 50,
-        description:  "Olá! Gosto bastante de conversar!",
-        andress: "@Julia1996",
-        status: "moderador",
-        border: 'border-green-400',
-    },
-    {
-        id: '8', 
-        name: 'Pedro',
-        imgUrl: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?crop=faces&fit=crop&h=200&w=200&auto=compress&cs=tinysrgb',
-        followers: 10,
-        following: 50,
-        description:  "ABC",
-        andress: "@PedroGM",
-        status: "moderator",
-        border: 'border-transparent',
-    },
-]
-
 const profiles = 
 [
     { 
         id: '0',
         name: 'Bianca',
         imgUrl: 'https://images.unsplash.com/photo-1546539782-6fc531453083?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ',
-        followers: followersB.length,
-        following: followingB.length,
+        followers: 10,
+        following: 20,
         description:  "Olá pessoal!",
         andress: "@Bianca1997",
         status: "🟢Moderador",
@@ -152,17 +100,6 @@ const profiles =
         status: "moderator",
         border: 'border-transparent',
     },
-    {
-        id: '9', 
-        name: 'Maria',
-        imgUrl: 'https://i.imgur.com/kJCWUAo.jpg',
-        followers: 1,
-        following: 5,
-        description:  "ABC",
-        andress: "@Maria2000",
-        status: "moderator",
-        border: 'border-transparent',
-    },
 ]
 
 //===============================  OPEN MODAL  ===============================  
@@ -170,13 +107,12 @@ let modal =
 {
     openModal(modals)
     {
-        document.querySelector('.modal-overlay').classList.toggle('invisible')
-        document.querySelector(`.${modals}`).classList.toggle('hidden')
-        document.querySelector(`.${modals}`).classList.toggle('.modal-bio')
+        document.querySelector('.modal-overlay').classList.toggle('invisible');
+        document.querySelector(`.${modals}`).classList.toggle('hidden');
         
         if(modals == 'modal-plus')
         {
-            document.querySelector('.btn-plus').classList.toggle('z-50')
+            document.querySelector('.btn-plus').classList.toggle('z-50');
         }
     },
     openBio(i)
@@ -254,7 +190,6 @@ const DOM =
     },
     innerHTMLBio(profiles)
     {
-        console.log(profiles.id)
         const profile =     `<div class="bio-profile${profiles.id}">
                                 
                                 <div class="flex justify-between w-full">                            
@@ -335,23 +270,10 @@ const DOM =
     }
 }
 
-const follows = 
-{
-    followersB()
-    {
-        const f = followersB.find(f => f.andress == "@Maria2000")
-        if(!f)
-        {
-            followersB.push(profiles[9])
-        }
-    }
-}
-
 for(let i = 3; i < profiles.length; i++)
 {
     DOM.createProfile(profiles[i])
 }
-
 
 for(let i = 0; i < 4; i++)
 {
